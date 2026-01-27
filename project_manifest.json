@@ -1,0 +1,1002 @@
+{
+  "project": {
+    "name": "Maze: Identity",
+    "type": "3D Exploration Game",
+    "engine": "Unity",
+    "status": "Ongoing Long-Term Project",
+    "origin": "IB MYP Personal Project",
+    "theme": "Identities and Relationships",
+    "core_idea": "Identity is not about escaping the path, but understanding how it shapes who we become."
+  },
+
+  "scenes": [
+    {
+      "id": "scene01",
+      "name": "School Maze",
+      "order": 1,
+      "description": "A guided corridor maze representing early structured identity formation.",
+      "mechanics": ["guided path", "limited movement", "uphill pacing"],
+      "status": "stable"
+    },
+    {
+      "id": "scene02",
+      "name": "Examination Hall",
+      "order": 2,
+      "description": "A quantified space where identity is measured and compared.",
+      "mechanics": ["vertical pressure", "visual comparison", "time constraint"],
+      "status": "stable"
+    },
+    {
+      "id": "scene03",
+      "name": "Lost Place",
+      "order": 3,
+      "description": "An unstructured maze with minimal guidance and increased ambiguity.",
+      "mechanics": ["fog", "silent path", "increased jump ability"],
+      "status": "stable"
+    },
+    {
+      "id": "scene04",
+      "name": "Center",
+      "order": 4,
+      "description": "A central convergence space symbolizing visibility and success.",
+      "mechanics": ["radial paths", "central light focus"],
+      "status": "stable"
+    },
+    {
+      "id": "scene05",
+      "name": "Inversion",
+      "order": 5,
+      "description": "The examination world flips into a vertical city structure.",
+      "mechanics": ["vertical traversal", "layered platforms"],
+      "status": "stable"
+    },
+    {
+      "id": "scene06",
+      "name": "Ascent",
+      "order": 6,
+      "description": "A prolonged climb emphasizing effort without guaranteed freedom.",
+      "mechanics": ["long ascent", "reduced guidance"],
+      "status": "stable"
+    },
+    {
+      "id": "scene07",
+      "name": "Summit",
+      "order": 7,
+      "description": "A non-playable ending space where the path remains but no longer defines the player.",
+      "mechanics": ["ending animation", "non-interactive sequence"],
+      "status": "stable"
+    }
+  ],
+
+  "versions": [
+    {
+      "version": "0.2.3",
+      "label": "Internal Test Build",
+      "playable_scenes": ["scene01", "scene02", "scene03", "scene04"],
+      "features": [
+        "basic level structure",
+        "early exploration mechanics"
+      ],
+      "distribution": "internal",
+      "notes": "Early structural validation build."
+    },
+    {
+      "version": "0.4.3",
+      "label": "Full Scene Internal Test",
+      "playable_scenes": [
+        "scene01",
+        "scene02",
+        "scene03",
+        "scene04",
+        "scene05",
+        "scene06",
+        "scene07"
+      ],
+      "features": [
+        "complete scene flow",
+        "checkpoint system (test)",
+        "UI system (test)",
+        "scene animation logic (test)"
+      ],
+      "distribution": "internal",
+      "notes": "First full-flow playable build."
+    },
+    {
+      "version": "1.0.2",
+      "label": "Exhibition Stable Build",
+      "playable_scenes": [
+        "scene01",
+        "scene02",
+        "scene03",
+        "scene04",
+        "scene05",
+        "scene06",
+        "scene07"
+      ],
+      "features": [
+        "stable UI system",
+        "full scene progression",
+        "exhibition-ready flow"
+      ],
+      "distribution": "exhibition-only",
+      "notes": "Prepared for public exhibition use."
+    }
+  ],
+
+  "known_issues": [
+    {
+      "id": "ISSUE-001",
+      "version_affected": "1.0.2",
+      "title": "Animation reload after returning from Options menu",
+      "description": "Opening the Options menu during gameplay and returning to the game may cause certain scene animations to reload.",
+      "severity": "minor",
+      "blocks_progression": false,
+      "status": "identified"
+    }
+  ],
+
+  "systems": {
+    "ui": {
+      "status": "stable",
+      "notes": "Core navigation and settings functional; minor transition issues remain."
+    },
+    "checkpoint": {
+      "status": "stable",
+      "notes": "Progress checkpoints validated across all scenes."
+    },
+    "scene_transition": {
+      "status": "stable",
+      "notes": "Unified trigger-based transition system in use."
+    },
+    "ending_sequence": {
+      "status": "stable",
+      "notes": "Non-interactive ending animation sequence implemented."
+    }
+  },
+
+  "distribution_policy": {
+    "github": {
+      "releases_public": true,
+      "downloadable_builds": false
+    },
+    "other_platforms": {
+      "planned": true,
+      "notes": "Public downloads will be handled via dedicated distribution platforms."
+    }
+  }
+}
+{
+  "project": {
+    "name": "Maze: Identity",
+    "type": "3D Exploration Game",
+    "engine": "Unity",
+    "status": "Ongoing Long-Term Project",
+    "origin": "IB MYP Personal Project",
+    "theme": "Identities and Relationships",
+    "core_idea": "Identity is not about escaping the path, but understanding how it shapes who we become."
+  },
+
+  "scenes": [
+    {
+      "id": "scene01",
+      "name": "School Maze",
+      "order": 1,
+      "description": "A guided corridor maze representing early structured identity formation.",
+      "mechanics": ["guided path", "limited movement", "uphill pacing"],
+      "status": "stable"
+    },
+    {
+      "id": "scene02",
+      "name": "Examination Hall",
+      "order": 2,
+      "description": "A quantified space where identity is measured and compared.",
+      "mechanics": ["vertical pressure", "visual comparison", "time constraint"],
+      "status": "stable"
+    },
+    {
+      "id": "scene03",
+      "name": "Lost Place",
+      "order": 3,
+      "description": "An unstructured maze with minimal guidance and increased ambiguity.",
+      "mechanics": ["fog", "silent path", "increased jump ability"],
+      "status": "stable"
+    },
+    {
+      "id": "scene04",
+      "name": "Center",
+      "order": 4,
+      "description": "A central convergence space symbolizing visibility and success.",
+      "mechanics": ["radial paths", "central light focus"],
+      "status": "stable"
+    },
+    {
+      "id": "scene05",
+      "name": "Inversion",
+      "order": 5,
+      "description": "The examination world flips into a vertical city structure.",
+      "mechanics": ["vertical traversal", "layered platforms"],
+      "status": "stable"
+    },
+    {
+      "id": "scene06",
+      "name": "Ascent",
+      "order": 6,
+      "description": "A prolonged climb emphasizing effort without guaranteed freedom.",
+      "mechanics": ["long ascent", "reduced guidance"],
+      "status": "stable"
+    },
+    {
+      "id": "scene07",
+      "name": "Summit",
+      "order": 7,
+      "description": "A non-playable ending space where the path remains but no longer defines the player.",
+      "mechanics": ["ending animation", "non-interactive sequence"],
+      "status": "stable"
+    }
+  ],
+
+  "versions": [
+    {
+      "version": "0.2.3",
+      "label": "Internal Test Build",
+      "playable_scenes": ["scene01", "scene02", "scene03", "scene04"],
+      "features": [
+        "basic level structure",
+        "early exploration mechanics"
+      ],
+      "distribution": "internal",
+      "notes": "Early structural validation build."
+    },
+    {
+      "version": "0.4.3",
+      "label": "Full Scene Internal Test",
+      "playable_scenes": [
+        "scene01",
+        "scene02",
+        "scene03",
+        "scene04",
+        "scene05",
+        "scene06",
+        "scene07"
+      ],
+      "features": [
+        "complete scene flow",
+        "checkpoint system (test)",
+        "UI system (test)",
+        "scene animation logic (test)"
+      ],
+      "distribution": "internal",
+      "notes": "First full-flow playable build."
+    },
+    {
+      "version": "1.0.2",
+      "label": "Exhibition Stable Build",
+      "playable_scenes": [
+        "scene01",
+        "scene02",
+        "scene03",
+        "scene04",
+        "scene05",
+        "scene06",
+        "scene07"
+      ],
+      "features": [
+        "stable UI system",
+        "full scene progression",
+        "exhibition-ready flow"
+      ],
+      "distribution": "exhibition-only",
+      "notes": "Prepared for public exhibition use."
+    }
+  ],
+
+  "known_issues": [
+    {
+      "id": "ISSUE-001",
+      "version_affected": "1.0.2",
+      "title": "Animation reload after returning from Options menu",
+      "description": "Opening the Options menu during gameplay and returning to the game may cause certain scene animations to reload.",
+      "severity": "minor",
+      "blocks_progression": false,
+      "status": "identified"
+    }
+  ],
+
+  "systems": {
+    "ui": {
+      "status": "stable",
+      "notes": "Core navigation and settings functional; minor transition issues remain."
+    },
+    "checkpoint": {
+      "status": "stable",
+      "notes": "Progress checkpoints validated across all scenes."
+    },
+    "scene_transition": {
+      "status": "stable",
+      "notes": "Unified trigger-based transition system in use."
+    },
+    "ending_sequence": {
+      "status": "stable",
+      "notes": "Non-interactive ending animation sequence implemented."
+    }
+  },
+
+  "distribution_policy": {
+    "github": {
+      "releases_public": true,
+      "downloadable_builds": false
+    },
+    "other_platforms": {
+      "planned": true,
+      "notes": "Public downloads will be handled via dedicated distribution platforms."
+    }
+  }
+}
+{
+  "project": {
+    "name": "Maze: Identity",
+    "type": "3D Exploration Game",
+    "engine": "Unity",
+    "status": "Ongoing Long-Term Project",
+    "origin": "IB MYP Personal Project",
+    "theme": "Identities and Relationships",
+    "core_idea": "Identity is not about escaping the path, but understanding how it shapes who we become."
+  },
+
+  "scenes": [
+    {
+      "id": "scene01",
+      "name": "School Maze",
+      "order": 1,
+      "description": "A guided corridor maze representing early structured identity formation.",
+      "mechanics": ["guided path", "limited movement", "uphill pacing"],
+      "status": "stable"
+    },
+    {
+      "id": "scene02",
+      "name": "Examination Hall",
+      "order": 2,
+      "description": "A quantified space where identity is measured and compared.",
+      "mechanics": ["vertical pressure", "visual comparison", "time constraint"],
+      "status": "stable"
+    },
+    {
+      "id": "scene03",
+      "name": "Lost Place",
+      "order": 3,
+      "description": "An unstructured maze with minimal guidance and increased ambiguity.",
+      "mechanics": ["fog", "silent path", "increased jump ability"],
+      "status": "stable"
+    },
+    {
+      "id": "scene04",
+      "name": "Center",
+      "order": 4,
+      "description": "A central convergence space symbolizing visibility and success.",
+      "mechanics": ["radial paths", "central light focus"],
+      "status": "stable"
+    },
+    {
+      "id": "scene05",
+      "name": "Inversion",
+      "order": 5,
+      "description": "The examination world flips into a vertical city structure.",
+      "mechanics": ["vertical traversal", "layered platforms"],
+      "status": "stable"
+    },
+    {
+      "id": "scene06",
+      "name": "Ascent",
+      "order": 6,
+      "description": "A prolonged climb emphasizing effort without guaranteed freedom.",
+      "mechanics": ["long ascent", "reduced guidance"],
+      "status": "stable"
+    },
+    {
+      "id": "scene07",
+      "name": "Summit",
+      "order": 7,
+      "description": "A non-playable ending space where the path remains but no longer defines the player.",
+      "mechanics": ["ending animation", "non-interactive sequence"],
+      "status": "stable"
+    }
+  ],
+
+  "versions": [
+    {
+      "version": "0.2.3",
+      "label": "Internal Test Build",
+      "playable_scenes": ["scene01", "scene02", "scene03", "scene04"],
+      "features": [
+        "basic level structure",
+        "early exploration mechanics"
+      ],
+      "distribution": "internal",
+      "notes": "Early structural validation build."
+    },
+    {
+      "version": "0.4.3",
+      "label": "Full Scene Internal Test",
+      "playable_scenes": [
+        "scene01",
+        "scene02",
+        "scene03",
+        "scene04",
+        "scene05",
+        "scene06",
+        "scene07"
+      ],
+      "features": [
+        "complete scene flow",
+        "checkpoint system (test)",
+        "UI system (test)",
+        "scene animation logic (test)"
+      ],
+      "distribution": "internal",
+      "notes": "First full-flow playable build."
+    },
+    {
+      "version": "1.0.2",
+      "label": "Exhibition Stable Build",
+      "playable_scenes": [
+        "scene01",
+        "scene02",
+        "scene03",
+        "scene04",
+        "scene05",
+        "scene06",
+        "scene07"
+      ],
+      "features": [
+        "stable UI system",
+        "full scene progression",
+        "exhibition-ready flow"
+      ],
+      "distribution": "exhibition-only",
+      "notes": "Prepared for public exhibition use."
+    }
+  ],
+
+  "known_issues": [
+    {
+      "id": "ISSUE-001",
+      "version_affected": "1.0.2",
+      "title": "Animation reload after returning from Options menu",
+      "description": "Opening the Options menu during gameplay and returning to the game may cause certain scene animations to reload.",
+      "severity": "minor",
+      "blocks_progression": false,
+      "status": "identified"
+    }
+  ],
+
+  "systems": {
+    "ui": {
+      "status": "stable",
+      "notes": "Core navigation and settings functional; minor transition issues remain."
+    },
+    "checkpoint": {
+      "status": "stable",
+      "notes": "Progress checkpoints validated across all scenes."
+    },
+    "scene_transition": {
+      "status": "stable",
+      "notes": "Unified trigger-based transition system in use."
+    },
+    "ending_sequence": {
+      "status": "stable",
+      "notes": "Non-interactive ending animation sequence implemented."
+    }
+  },
+
+  "distribution_policy": {
+    "github": {
+      "releases_public": true,
+      "downloadable_builds": false
+    },
+    "other_platforms": {
+      "planned": true,
+      "notes": "Public downloads will be handled via dedicated distribution platforms."
+    }
+  }
+}
+{
+  "project": {
+    "name": "Maze: Identity",
+    "type": "3D Exploration Game",
+    "engine": "Unity",
+    "status": "Ongoing Long-Term Project",
+    "origin": "IB MYP Personal Project",
+    "theme": "Identities and Relationships",
+    "core_idea": "Identity is not about escaping the path, but understanding how it shapes who we become."
+  },
+
+  "scenes": [
+    {
+      "id": "scene01",
+      "name": "School Maze",
+      "order": 1,
+      "description": "A guided corridor maze representing early structured identity formation.",
+      "mechanics": ["guided path", "limited movement", "uphill pacing"],
+      "status": "stable"
+    },
+    {
+      "id": "scene02",
+      "name": "Examination Hall",
+      "order": 2,
+      "description": "A quantified space where identity is measured and compared.",
+      "mechanics": ["vertical pressure", "visual comparison", "time constraint"],
+      "status": "stable"
+    },
+    {
+      "id": "scene03",
+      "name": "Lost Place",
+      "order": 3,
+      "description": "An unstructured maze with minimal guidance and increased ambiguity.",
+      "mechanics": ["fog", "silent path", "increased jump ability"],
+      "status": "stable"
+    },
+    {
+      "id": "scene04",
+      "name": "Center",
+      "order": 4,
+      "description": "A central convergence space symbolizing visibility and success.",
+      "mechanics": ["radial paths", "central light focus"],
+      "status": "stable"
+    },
+    {
+      "id": "scene05",
+      "name": "Inversion",
+      "order": 5,
+      "description": "The examination world flips into a vertical city structure.",
+      "mechanics": ["vertical traversal", "layered platforms"],
+      "status": "stable"
+    },
+    {
+      "id": "scene06",
+      "name": "Ascent",
+      "order": 6,
+      "description": "A prolonged climb emphasizing effort without guaranteed freedom.",
+      "mechanics": ["long ascent", "reduced guidance"],
+      "status": "stable"
+    },
+    {
+      "id": "scene07",
+      "name": "Summit",
+      "order": 7,
+      "description": "A non-playable ending space where the path remains but no longer defines the player.",
+      "mechanics": ["ending animation", "non-interactive sequence"],
+      "status": "stable"
+    }
+  ],
+
+  "versions": [
+    {
+      "version": "0.2.3",
+      "label": "Internal Test Build",
+      "playable_scenes": ["scene01", "scene02", "scene03", "scene04"],
+      "features": [
+        "basic level structure",
+        "early exploration mechanics"
+      ],
+      "distribution": "internal",
+      "notes": "Early structural validation build."
+    },
+    {
+      "version": "0.4.3",
+      "label": "Full Scene Internal Test",
+      "playable_scenes": [
+        "scene01",
+        "scene02",
+        "scene03",
+        "scene04",
+        "scene05",
+        "scene06",
+        "scene07"
+      ],
+      "features": [
+        "complete scene flow",
+        "checkpoint system (test)",
+        "UI system (test)",
+        "scene animation logic (test)"
+      ],
+      "distribution": "internal",
+      "notes": "First full-flow playable build."
+    },
+    {
+      "version": "1.0.2",
+      "label": "Exhibition Stable Build",
+      "playable_scenes": [
+        "scene01",
+        "scene02",
+        "scene03",
+        "scene04",
+        "scene05",
+        "scene06",
+        "scene07"
+      ],
+      "features": [
+        "stable UI system",
+        "full scene progression",
+        "exhibition-ready flow"
+      ],
+      "distribution": "exhibition-only",
+      "notes": "Prepared for public exhibition use."
+    }
+  ],
+
+  "known_issues": [
+    {
+      "id": "ISSUE-001",
+      "version_affected": "1.0.2",
+      "title": "Animation reload after returning from Options menu",
+      "description": "Opening the Options menu during gameplay and returning to the game may cause certain scene animations to reload.",
+      "severity": "minor",
+      "blocks_progression": false,
+      "status": "identified"
+    }
+  ],
+
+  "systems": {
+    "ui": {
+      "status": "stable",
+      "notes": "Core navigation and settings functional; minor transition issues remain."
+    },
+    "checkpoint": {
+      "status": "stable",
+      "notes": "Progress checkpoints validated across all scenes."
+    },
+    "scene_transition": {
+      "status": "stable",
+      "notes": "Unified trigger-based transition system in use."
+    },
+    "ending_sequence": {
+      "status": "stable",
+      "notes": "Non-interactive ending animation sequence implemented."
+    }
+  },
+
+  "distribution_policy": {
+    "github": {
+      "releases_public": true,
+      "downloadable_builds": false
+    },
+    "other_platforms": {
+      "planned": true,
+      "notes": "Public downloads will be handled via dedicated distribution platforms."
+    }
+  }
+}
+{
+  "project": {
+    "name": "Maze: Identity",
+    "type": "3D Exploration Game",
+    "engine": "Unity",
+    "status": "Ongoing Long-Term Project",
+    "origin": "IB MYP Personal Project",
+    "theme": "Identities and Relationships",
+    "core_idea": "Identity is not about escaping the path, but understanding how it shapes who we become."
+  },
+
+  "scenes": [
+    {
+      "id": "scene01",
+      "name": "School Maze",
+      "order": 1,
+      "description": "A guided corridor maze representing early structured identity formation.",
+      "mechanics": ["guided path", "limited movement", "uphill pacing"],
+      "status": "stable"
+    },
+    {
+      "id": "scene02",
+      "name": "Examination Hall",
+      "order": 2,
+      "description": "A quantified space where identity is measured and compared.",
+      "mechanics": ["vertical pressure", "visual comparison", "time constraint"],
+      "status": "stable"
+    },
+    {
+      "id": "scene03",
+      "name": "Lost Place",
+      "order": 3,
+      "description": "An unstructured maze with minimal guidance and increased ambiguity.",
+      "mechanics": ["fog", "silent path", "increased jump ability"],
+      "status": "stable"
+    },
+    {
+      "id": "scene04",
+      "name": "Center",
+      "order": 4,
+      "description": "A central convergence space symbolizing visibility and success.",
+      "mechanics": ["radial paths", "central light focus"],
+      "status": "stable"
+    },
+    {
+      "id": "scene05",
+      "name": "Inversion",
+      "order": 5,
+      "description": "The examination world flips into a vertical city structure.",
+      "mechanics": ["vertical traversal", "layered platforms"],
+      "status": "stable"
+    },
+    {
+      "id": "scene06",
+      "name": "Ascent",
+      "order": 6,
+      "description": "A prolonged climb emphasizing effort without guaranteed freedom.",
+      "mechanics": ["long ascent", "reduced guidance"],
+      "status": "stable"
+    },
+    {
+      "id": "scene07",
+      "name": "Summit",
+      "order": 7,
+      "description": "A non-playable ending space where the path remains but no longer defines the player.",
+      "mechanics": ["ending animation", "non-interactive sequence"],
+      "status": "stable"
+    }
+  ],
+
+  "versions": [
+    {
+      "version": "0.2.3",
+      "label": "Internal Test Build",
+      "playable_scenes": ["scene01", "scene02", "scene03", "scene04"],
+      "features": [
+        "basic level structure",
+        "early exploration mechanics"
+      ],
+      "distribution": "internal",
+      "notes": "Early structural validation build."
+    },
+    {
+      "version": "0.4.3",
+      "label": "Full Scene Internal Test",
+      "playable_scenes": [
+        "scene01",
+        "scene02",
+        "scene03",
+        "scene04",
+        "scene05",
+        "scene06",
+        "scene07"
+      ],
+      "features": [
+        "complete scene flow",
+        "checkpoint system (test)",
+        "UI system (test)",
+        "scene animation logic (test)"
+      ],
+      "distribution": "internal",
+      "notes": "First full-flow playable build."
+    },
+    {
+      "version": "1.0.2",
+      "label": "Exhibition Stable Build",
+      "playable_scenes": [
+        "scene01",
+        "scene02",
+        "scene03",
+        "scene04",
+        "scene05",
+        "scene06",
+        "scene07"
+      ],
+      "features": [
+        "stable UI system",
+        "full scene progression",
+        "exhibition-ready flow"
+      ],
+      "distribution": "exhibition-only",
+      "notes": "Prepared for public exhibition use."
+    }
+  ],
+
+  "known_issues": [
+    {
+      "id": "ISSUE-001",
+      "version_affected": "1.0.2",
+      "title": "Animation reload after returning from Options menu",
+      "description": "Opening the Options menu during gameplay and returning to the game may cause certain scene animations to reload.",
+      "severity": "minor",
+      "blocks_progression": false,
+      "status": "identified"
+    }
+  ],
+
+  "systems": {
+    "ui": {
+      "status": "stable",
+      "notes": "Core navigation and settings functional; minor transition issues remain."
+    },
+    "checkpoint": {
+      "status": "stable",
+      "notes": "Progress checkpoints validated across all scenes."
+    },
+    "scene_transition": {
+      "status": "stable",
+      "notes": "Unified trigger-based transition system in use."
+    },
+    "ending_sequence": {
+      "status": "stable",
+      "notes": "Non-interactive ending animation sequence implemented."
+    }
+  },
+
+  "distribution_policy": {
+    "github": {
+      "releases_public": true,
+      "downloadable_builds": false
+    },
+    "other_platforms": {
+      "planned": true,
+      "notes": "Public downloads will be handled via dedicated distribution platforms."
+    }
+  }
+}
+{
+  "project": {
+    "name": "Maze: Identity",
+    "type": "3D Exploration Game",
+    "engine": "Unity",
+    "status": "Ongoing Long-Term Project",
+    "origin": "IB MYP Personal Project",
+    "theme": "Identities and Relationships",
+    "core_idea": "Identity is not about escaping the path, but understanding how it shapes who we become."
+  },
+
+  "scenes": [
+    {
+      "id": "scene01",
+      "name": "School Maze",
+      "order": 1,
+      "description": "A guided corridor maze representing early structured identity formation.",
+      "mechanics": ["guided path", "limited movement", "uphill pacing"],
+      "status": "stable"
+    },
+    {
+      "id": "scene02",
+      "name": "Examination Hall",
+      "order": 2,
+      "description": "A quantified space where identity is measured and compared.",
+      "mechanics": ["vertical pressure", "visual comparison", "time constraint"],
+      "status": "stable"
+    },
+    {
+      "id": "scene03",
+      "name": "Lost Place",
+      "order": 3,
+      "description": "An unstructured maze with minimal guidance and increased ambiguity.",
+      "mechanics": ["fog", "silent path", "increased jump ability"],
+      "status": "stable"
+    },
+    {
+      "id": "scene04",
+      "name": "Center",
+      "order": 4,
+      "description": "A central convergence space symbolizing visibility and success.",
+      "mechanics": ["radial paths", "central light focus"],
+      "status": "stable"
+    },
+    {
+      "id": "scene05",
+      "name": "Inversion",
+      "order": 5,
+      "description": "The examination world flips into a vertical city structure.",
+      "mechanics": ["vertical traversal", "layered platforms"],
+      "status": "stable"
+    },
+    {
+      "id": "scene06",
+      "name": "Ascent",
+      "order": 6,
+      "description": "A prolonged climb emphasizing effort without guaranteed freedom.",
+      "mechanics": ["long ascent", "reduced guidance"],
+      "status": "stable"
+    },
+    {
+      "id": "scene07",
+      "name": "Summit",
+      "order": 7,
+      "description": "A non-playable ending space where the path remains but no longer defines the player.",
+      "mechanics": ["ending animation", "non-interactive sequence"],
+      "status": "stable"
+    }
+  ],
+
+  "versions": [
+    {
+      "version": "0.2.3",
+      "label": "Internal Test Build",
+      "playable_scenes": ["scene01", "scene02", "scene03", "scene04"],
+      "features": [
+        "basic level structure",
+        "early exploration mechanics"
+      ],
+      "distribution": "internal",
+      "notes": "Early structural validation build."
+    },
+    {
+      "version": "0.4.3",
+      "label": "Full Scene Internal Test",
+      "playable_scenes": [
+        "scene01",
+        "scene02",
+        "scene03",
+        "scene04",
+        "scene05",
+        "scene06",
+        "scene07"
+      ],
+      "features": [
+        "complete scene flow",
+        "checkpoint system (test)",
+        "UI system (test)",
+        "scene animation logic (test)"
+      ],
+      "distribution": "internal",
+      "notes": "First full-flow playable build."
+    },
+    {
+      "version": "1.0.2",
+      "label": "Exhibition Stable Build",
+      "playable_scenes": [
+        "scene01",
+        "scene02",
+        "scene03",
+        "scene04",
+        "scene05",
+        "scene06",
+        "scene07"
+      ],
+      "features": [
+        "stable UI system",
+        "full scene progression",
+        "exhibition-ready flow"
+      ],
+      "distribution": "exhibition-only",
+      "notes": "Prepared for public exhibition use."
+    }
+  ],
+
+  "known_issues": [
+    {
+      "id": "ISSUE-001",
+      "version_affected": "1.0.2",
+      "title": "Animation reload after returning from Options menu",
+      "description": "Opening the Options menu during gameplay and returning to the game may cause certain scene animations to reload.",
+      "severity": "minor",
+      "blocks_progression": false,
+      "status": "identified"
+    }
+  ],
+
+  "systems": {
+    "ui": {
+      "status": "stable",
+      "notes": "Core navigation and settings functional; minor transition issues remain."
+    },
+    "checkpoint": {
+      "status": "stable",
+      "notes": "Progress checkpoints validated across all scenes."
+    },
+    "scene_transition": {
+      "status": "stable",
+      "notes": "Unified trigger-based transition system in use."
+    },
+    "ending_sequence": {
+      "status": "stable",
+      "notes": "Non-interactive ending animation sequence implemented."
+    }
+  },
+
+  "distribution_policy": {
+    "github": {
+      "releases_public": true,
+      "downloadable_builds": false
+    },
+    "other_platforms": {
+      "planned": true,
+      "notes": "Public downloads will be handled via dedicated distribution platforms."
+    }
+  }
+}
