@@ -7,7 +7,7 @@ The project was initially developed as an IB MYP Personal Project and continues 
 ---
 
 ## 🎮 Project Overview
-- Engine: Unity
+- Engine: Unity 
 - Genre: 3D Exploration / Narrative Experience
 - Platform: PC
 - Status: Ongoing long-term project
